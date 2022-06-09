@@ -18,36 +18,21 @@
 
 variable "name" {
   type        = string
-  description = "The name of the resource group you are deploying"
+  description = "The prefix name you want to use to deploy the resources, typically the name of the project"
 }
 
-variable "location" {
+variable "resource_group" {
   type        = string
-  description = "The location of the resource group, defaults to west Europe"
-  default     = "westeurope"
+  description = "The name of the resource group you are deploying the services to."
 }
 
-variable "customTag1" {
-  type        = string
-  description = "the first customTag"
+variable "log_analytics_workspace" {
+  type        = bool
+  default     = true
+  description = "Whether or not you want to deploy a log analytics workspace for the Grafana instance, set to false if you already have an instance."
 }
 
-variable "customTag2" {
+variable "admin_user_object_id" {
   type        = string
-  description = "the second customTag"
-}
-
-variable "customTag3" {
-  type        = string
-  description = "the third customTag"
-}
-
-variable "customTag4" {
-  type        = string
-  description = "the fourth customTag"
-}
-
-variable "customTag5" {
-  type        = string
-  description = "the fifth customTag"
+  description = "The object ID of the user you want to give admin access to the Grafana instance."
 }

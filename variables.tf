@@ -34,5 +34,5 @@ variable "log_analytics_workspace" {
 
 variable "admin_user_object_id" {
   type        = string
-  description = "The object ID of the user you want to give admin access to the Grafana instance."
+  description = "The object ID of the user or group you want to grant admin access on the Grafana instance."
 }

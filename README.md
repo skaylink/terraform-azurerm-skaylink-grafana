@@ -29,7 +29,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_admin_user_object_id"></a> [admin\_user\_object\_id](#input\_admin\_user\_object\_id) | The object ID of the user you want to give admin access to the Grafana instance. | `string` | n/a | yes |
+| <a name="input_admin_user_object_id"></a> [admin\_user\_object\_id](#input\_admin\_user\_object\_id) | The object ID of the user or group you want to grant admin access on the Grafana instance. | `string` | n/a | yes |
 | <a name="input_log_analytics_workspace"></a> [log\_analytics\_workspace](#input\_log\_analytics\_workspace) | Whether or not you want to deploy a log analytics workspace for the Grafana instance, set to false if you already have an instance. | `bool` | `true` | no |
 | <a name="input_name"></a> [name](#input\_name) | The prefix name you want to use to deploy the resources, typically the name of the project | `string` | n/a | yes |
 | <a name="input_resource_group"></a> [resource\_group](#input\_resource\_group) | The name of the resource group you are deploying the services to. | `string` | n/a | yes |

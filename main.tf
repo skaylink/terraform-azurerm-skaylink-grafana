@@ -67,8 +67,9 @@ provider "azurerm" {
 }
 
 resource "azurerm_role_assignment" "grafana_admin" {
+  count = var.grafana_admin_object_id != null ? 1 : 0
 
   scope                = data.azurerm_resource_group.rg.id
   role_definition_name = "Grafana Admin"
-  principal_id         = var.admin_user_object_id
+  principal_id         = var.grafana_admin_object_id
 }

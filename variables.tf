@@ -32,7 +32,8 @@ variable "log_analytics_workspace" {
   description = "Whether or not you want to deploy a log analytics workspace for the Grafana instance, set to false if you already have an instance."
 }
 
-variable "admin_user_object_id" {
+variable "grafana_admin_object_id" {
   type        = string
+  default     = null
   description = "The object ID of the user or group you want to grant admin access on the Grafana instance."
 }

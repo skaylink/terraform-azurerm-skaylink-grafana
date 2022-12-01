@@ -17,6 +17,6 @@
 # For questions and contributions please contact info@iq3cloud.com
 
 output "log_analytics_workspace" {
-  value     = var.log_analytics_workspace == true ? azurerm_log_analytics_workspace.workspace[0].id : null
+  value     = var.log_analytics_workspace == true ? azurerm_log_analytics_workspace.workspace[0] : null
   sensitive = true
 }
